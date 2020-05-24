@@ -1,0 +1,51 @@
+﻿<Window x:Class="Project_Three_GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_Three_GUI"
+        xmlns:SystemGesture="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="EntryWindow" Height="800" Width="800" Background="Gray"
+        Icon="./Resources/dunwoodyicon.jpg"
+        MouseMove="Window_MouseMove">
+    <Window.Resources>
+        <SystemGesture:String x:Key="strHelloAgain">Hello</SystemGesture:String>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="1"/>
+            <Setter Property="FontSize" Value="40"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Border Background="white" CornerRadius="20" Margin="20">
+            <StackPanel Orientation="Vertical">
+                <Label Content="Dunwoody Housing Application Login Screen" Foreground="Black" FontSize="16" HorizontalAlignment="Center"/>
+                <Separator></Separator>
+                <Label Content="Username" Foreground="Black"/>
+                <TextBox Name="txtUsername" Background="white" Foreground="Black" FontSize="18"/>
+                <Label Content="Password" Foreground="Black"/>
+                <TextBox Name="txtPassword" Background="white" Foreground="Black" FontSize="18"/>
+                <Button Name="btnLoginSubmit" Content="Submit" Margin="250 10" Background="#aa1d2c" Foreground="White" Click="BtnLoginSubmit_Click"/>
+                <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" 
+                       Text="Dunwoody Housing Application" VerticalAlignment="Top" FontSize="40"/>
+                <TextBlock Text="{StaticResource strHelloAgain}"
+                       FontSize="40" HorizontalAlignment="Center"/>
+                <Button x:Name="Button1" Height="60" Width="300" Background="#aa1d2c" Foreground="White"
+                    HorizontalAlignment="Center" Content="Close Window"
+                    Click="Button1_Click"/>
+                <Button x:Name="BtnOpenFile" Height="60" Width="300" Background="#aa1d2c" Foreground="White"
+                    HorizontalAlignment="Center" Content="Open File"
+                    Click="BtnOpenFile_Click"/>
+                <Button x:Name="BtnSaveFile" Height="60" Width="300" Background="#aa1d2c" Foreground="White"
+                    HorizontalAlignment="Center" Content="Save File"
+                    Click="BtnSaveFile_Click"/>
+
+              
+
+            </StackPanel>
+        </Border>
+    </Grid>
+    
+</Window>
